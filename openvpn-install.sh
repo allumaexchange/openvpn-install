@@ -71,7 +71,7 @@ if [[ -e /etc/openvpn/server.conf ]]; then
 			echo "Please, use one word only, no special characters."
 			read -p "Client name: " -e CLIENT
 			cd /etc/openvpn/easy-rsa/
-			./easyrsa build-client-full $CLIENT nopass
+			./easyrsa build-client-full $CLIENT
 			# Generates the custom client.ovpn
 			newclient "$CLIENT"
 			echo
